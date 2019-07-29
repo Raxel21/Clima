@@ -1,0 +1,56 @@
+<img src="img/mdboot.jpg" class="included">
+<div class="blur-effect">
+	<!-- <span class="title">Current weather and forecasts in your city</span> -->
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<!-- Default input -->
+			<form>
+				<div class="form-row align-items-center">
+					<div class="md-form">
+						<i class="fas fa-city prefix"></i>
+						<input type="text" id="cityName" class="form-control" ng-model="data.city">
+						<label for="cityName">Berlín</label>
+					</div>
+					<div class="col-auto">
+						<button class="btn btn-outline-dark waves-effect my-btn" ng-click="getData(data)">Buscar<i class="fas fa-search ml-1"></i></button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="informacion animate-repeat" ng-repeat="x in datos">
+				<span class="subtitle">Weather in </span>
+				<span>
+					{{ x.data.name }}, {{ x.data.sys.country }}.
+				</span>
+				<br>
+				<span class="subtitle">Description:</span>
+				<span>
+					{{ x.data.weather[0].description }}
+				</span>
+				<img src="http://openweathermap.org/img/wn/{{x.data.weather[0].icon}}.png"><br>
+				<span class="subtitle">Humidity: </span><span>{{ x.data.main.humidity }}%</span><br>
+				<span class="subtitle">Pressure: </span><span>{{ x.data.main.pressure }}</span><br>
+				<span class="subtitle">Temp: </span><span>{{ x.data.main.temp }}C°</span><br>
+				<span class="subtitle">Hour: </span><span>{{ hour }}:{{ min }}</span>
+			</div>
+			<div class="alert alert-danger animated" role="alert" ng-show="found">
+				<span>sin resultados</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+		</div>
+	</div>
+</div>

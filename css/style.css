@@ -1,0 +1,160 @@
+.text-white {
+	color: #fff;
+}
+
+.fondo {
+	height: 100vh;
+	background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat;
+  background-size: cover;
+}
+
+.gris {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.top-nav-collapse {
+	background: rgba(0, 0, 0, 0.774) !important;
+}
+
+.jumbotron {
+	background-color: #1b7fbd;
+	color: #fff;
+}
+
+.included {
+	width: 100%;
+	/*height: 617.5px;*/
+  height: 450px;
+}
+
+@media(max-width: 992px) {
+	.included {
+		max-width: 100%;
+  	height: auto;
+	}
+} 
+
+.subtitle {
+  font-weight: bolder;
+}
+
+.informacion {
+  font-size: 25px;
+}
+
+.my-btn {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/*Animate for Angular*/
+.animate-repeat {
+  position: absolute;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition:all linear .5s;
+}
+
+/*-- Animacion de salida --*/
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  left: -150px;
+}
+
+/*-- Animacion de entrada --*/
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  left: 15px;
+}
+
+/* Have to set height explicity on ui-view 
+to prevent collapsing during animation*/
+/*.well[ui-view]{
+ height: 0; 
+}*/
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .8s ease-in-out;
+	-moz-transition:all .8s ease-in-out;
+	-o-transition:all .8s ease-in-out;
+	transition:all .8s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.5) ;
+  -ms-transform: scale(0.5) ;
+  -o-transform: scale(0.5) ;
+  transform: scale(0.5) ;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+  padding-left: 0px;  
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  padding-left: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+.animated {
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.animated.ng-hide {
+  opacity: 0;
+}
+
+/*-- maps styles --*/
+#map {
+  width: 100%;
+  height: 400px;
+  -webkit-box-shadow: 5px 5px 10px;
+  box-shadow: 5px 5px 10px;
+  border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000;
+}
+
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: grey;
+  color: #fff;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color:#fff;
+}
+
+#maps {
+  width: 100%;
+  height: 500px;
+}
